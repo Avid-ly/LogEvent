@@ -7,7 +7,7 @@
 //
 
 #import "FirebaseLogEvent.h"
-#import <AppsFlyerLib/AppsFlyerLib.h>
+#import <FirebaseAnalytics/FirebaseAnalytics.h>
 
 @implementation FirebaseLogEvent
 
@@ -15,7 +15,7 @@
 
 + (void)logEventWithName:(NSString *)key parameters:(NSDictionary<NSString *, id> *)value {
     NSLog(@"[FirebaseLogEvent] key:%@ value:%@",key,value);
-    [self logEventWithName:key parameters:value];
+    [FIRAnalytics logEventWithName:key parameters:value];
 }
 
 #pragma mark - 登录次数
